@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ListItem,
   ListItemAvatar,
@@ -15,6 +15,7 @@ import {
   AttachMoney,
 } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import { processNumber } from '../utils';
 
 const useStyles = makeStyles(theme => ({
   itemRoot: {
@@ -28,6 +29,11 @@ const useStyles = makeStyles(theme => ({
     width: 86,
     height: 86,
     marginRight: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      width: 64,
+      height: 64,
+      marginRight: theme.spacing(1),
+    }
   },
   empty: {
     flex: 1,
@@ -61,25 +67,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const processNumber = (value) => {
-  const number = parseInt(value);
-  if (number > 99) return 99;
-  if (number && number > 0) return number;
-  return 0;
-}
-
 const Item = (props) => {
-  const { key, name = "Checkien Momo", price = "10.05", hashId = "#4231648", ...others } = props;
+  const { key, name, price, setItemNumber, onClearItem, hashId, count, ...others } = props;
   const classes = useStyles();
-  const [number, setNumber] = useState(1);
-  const onIncreaseClick = () => setNumber(processNumber(number + 1));
-  const onDecreaseClick = () => setNumber(processNumber(number - 1));
-  const onChangeNumber = (e) => {
-    setNumber(processNumber(e.target.value));
-  }
-  const onClickClear = () => {};
+  const onIncreaseClick = () => setItemNumber(processNumber(count + 1));
+  const onDecreaseClick = () => setItemNumber(processNumber(count - 1));
+  const onChangeNumber = (e) => setItemNumber(processNumber(e.target.value));
   return (
-    <ListItem alignItems="center" className={classes.itemRoot} {...others}>
+    <ListItem alignItems="center" disableGutters className={classes.itemRoot} {...others}>
       <ListItemAvatar>
         <Avatar 
           className={classes.itemImg}
@@ -94,7 +89,7 @@ const Item = (props) => {
           <Remove />
         </IconButton>
         <TextField 
-          value={number}
+          value={count}
           onChange={onChangeNumber}
           variant="outlined"
           InputProps={{ 
@@ -108,10 +103,10 @@ const Item = (props) => {
         </IconButton>
       </div>
       <div className={classes.moneyClass}>
-        <Typography style={{ width: 48 }} variant="subtitle2">{(price * number).toFixed(2)}</Typography>
+        <Typography style={{ width: 48 }} variant="subtitle2">{(price * count).toFixed(2)}</Typography>
         <AttachMoney className={classes.moneyIcon} />
       </div>
-      <IconButton onClick={onClickClear}>
+      <IconButton onClick={onClearItem}>
         <Clear />
       </IconButton>
     </ListItem>
