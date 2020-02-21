@@ -13,8 +13,11 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     borderRadius: 8,
     transform: 'translateX(-88px)',
-    [theme.breakpoints.down('sm')]: {
-      transform: 'translateX(-48px)',
+    [theme.breakpoints.down('md')]: {
+      transform: 'translateX(-68px)',
+    },
+    [theme.breakpoints.down('md')]: {
+      transform: 'translateX(-54px)',
     }
   },
   content: {

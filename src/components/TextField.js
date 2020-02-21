@@ -4,9 +4,9 @@ import MuiTextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: theme.spacing(0.5),
-      marginBottom: theme.spacing(0.5),
+    [theme.breakpoints.down('md')]: {
+      marginTop: theme.spacing(1.5),
+      marginBottom: theme.spacing(1.5),
     },
   },
   inputLabel: {

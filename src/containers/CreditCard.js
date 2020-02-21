@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     flex: 3,
     backgroundColor: theme.palette.background.cardBg,
     borderRadius: 8,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       margin: theme.spacing(1.2),
     },
   },
@@ -88,7 +88,7 @@ const CreditCard = (props) => {
       <InputLabel className={classes.label}>
         Card Type
       </InputLabel>
-      <FlexDiv row style={{ alignItems: 'center', paddingBottom: 12 }}>
+      <FlexDiv row style={{ alignItems: 'center', paddingBottom: 12, justifyContent: 'space-around' }}>
         <FloatCard {...cardInfo} />
         <img alt="mastercard" className={classes.masterCard} src='./mastercard.png'/>
       </FlexDiv>

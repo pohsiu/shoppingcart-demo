@@ -10,7 +10,10 @@ const useStyles = makeStyles(theme => ({
     padding: '32px 48px',
     [theme.breakpoints.down('sm')]: {
       padding: 0,
-    }
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(1),
+    },
   },
 }));
 

@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     width: 86,
     height: 86,
     marginRight: theme.spacing(3),
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: 64,
       height: 64,
       marginRight: theme.spacing(1),

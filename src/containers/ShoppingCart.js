@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     flex: 5,
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(1.5),
-    }
+    },
   },
   btnFlex: {
     padding: theme.spacing(2),
