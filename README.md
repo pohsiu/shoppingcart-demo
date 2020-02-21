@@ -14,7 +14,8 @@ You will also see any lint errors in the console.
 ### Run Test: use `yarn test`
 Run up unit test in jest
 
-### Build the code in bundle: use `yarn build` to get /build dir
+### Build the code in bundle: use `yarn build` 
+Run command and get /build dir
 
 ### Deploy it to gh-page: use `yarn deploy`
 The code will start building then deploy to the gh-page url which declared in package.json.
@@ -22,13 +23,13 @@ The code will start building then deploy to the gh-page url which declared in pa
 
 ### Spec Tools Usage
 - Material UI
-  CSS library for accelerating implementation.
+  - CSS library for accelerating implementation.
 - Redux
-  Front end data state controller
+  - front end data state controller
 
 ### Responsive Web Design Fit
-Implement RWD with breakpoint and flexWrap, fit min width of 375px (iphone10 screen)
+- Implement RWD with breakpoint and flexWrap, fit min width of 375px (iphone10 screen)
 
 ### Something left to do.
 - Testing Part
-  Might need more in detail testing.
+  - Might need more in detail testing.
