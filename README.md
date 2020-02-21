@@ -19,13 +19,13 @@ Run command and get /build dir
 
 ### Deploy it to gh-page: use `yarn deploy`
 The code will start building then deploy to the gh-page url which declared in package.json.
-- Go Check [Website](https://pohsiu.github.io/shoppingcart-demo/)
+- Go check [Website](https://pohsiu.github.io/shoppingcart-demo/)
 
 ### Spec Tools Usage
 - Material UI
   - CSS library for accelerating implementation.
 - Redux
-  - front end data state controller
+  - Front end data state controller
 
 ### Responsive Web Design Fit
 - Implement RWD with breakpoint and flexWrap, fit min width of 375px (iphone10 screen)
