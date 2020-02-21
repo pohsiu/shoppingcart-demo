@@ -16,8 +16,9 @@ Run up unit test in jest
 
 ### Build the code in bundle: use `yarn build` to get /build dir
 
-### Deploy it to gh-page: use `yarn deploy
+### Deploy it to gh-page: use `yarn deploy`
 The code will start building then deploy to the gh-page url which declared in package.json.
+- Go Check [Website](https://pohsiu.github.io/shoppingcart-demo/)
 
 ### Spec Tools Usage
 - Material UI
