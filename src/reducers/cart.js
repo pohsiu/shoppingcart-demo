@@ -51,6 +51,7 @@ const cart = (state = initialCart, action) => {
       const { itemsById } = state;
       Object.keys(itemsById).map(id => {
         itemsById[id].count = 1;
+        return null;
       })
       return {
         itemsById: {

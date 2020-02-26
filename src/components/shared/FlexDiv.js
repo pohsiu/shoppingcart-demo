@@ -54,7 +54,7 @@ const FlexDiv = (props) => {
   )
 }
 FlexDiv.propTypes = {
-  wrap: PropTypes.bool || undefined,
+  wrap: PropTypes.oneOf(['wrap', 'noWrap', 'wrap-reverse']),
   row: PropTypes.bool || undefined,
   column: PropTypes.bool || undefined,
   grow: PropTypes.bool || undefined,

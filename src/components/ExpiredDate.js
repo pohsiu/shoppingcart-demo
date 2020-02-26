@@ -101,7 +101,7 @@ ExpiredDate.propTypes = {
   setCardInfo: PropTypes.func,
   month: PropTypes.string,
   year: PropTypes.string,
-  onFocus: PropTypes.bool,
+  onFocus: PropTypes.func,
   error: PropTypes.bool,
 }
 

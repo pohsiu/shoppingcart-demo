@@ -127,7 +127,7 @@ Item.propTypes = {
   setItemNumber: PropTypes.func,
   onClearItem: PropTypes.func,
   hashId: PropTypes.string,
-  count: PropTypes.string || PropTypes.number,
+  count: PropTypes.number,
 }
 
 export default Item;
