@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const ShoppingCart = (props) => {
+const ShoppingCart = () => {
   const classes = useStyles();
   const subtotal = useSelector(Selectors.selectSubTotal);
   const listItems = useSelector(Selectors.selectCartCollection);

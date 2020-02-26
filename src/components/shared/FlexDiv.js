@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
+import PropTypes, { any } from 'prop-types';
 
 const useStyles = makeStyles({
   root: {
@@ -30,6 +31,7 @@ const useStyles = makeStyles({
   },
 })
 
+
 const FlexDiv = (props) => {
   const { wrap, row, column, children, className, grow, shrink, ...others } = props;
   const classes = useStyles();
@@ -51,5 +53,13 @@ const FlexDiv = (props) => {
     </div>
   )
 }
-
+FlexDiv.propTypes = {
+  wrap: PropTypes.bool || undefined,
+  row: PropTypes.bool || undefined,
+  column: PropTypes.bool || undefined,
+  grow: PropTypes.bool || undefined,
+  shrink: PropTypes.bool || undefined,
+  children: any,
+  className: any,
+}
 export default FlexDiv;

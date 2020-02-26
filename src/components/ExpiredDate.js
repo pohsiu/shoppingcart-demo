@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import PropTypes from 'prop-types';
 import FlexDiv from './shared/FlexDiv';
 import TextField from './shared/TextField';
 
@@ -95,5 +96,13 @@ const ExpiredDate = (props) => {
     </FlexDiv>
   );
 };
+
+ExpiredDate.propTypes = {
+  setCardInfo: PropTypes.func,
+  month: PropTypes.string,
+  year: PropTypes.string,
+  onFocus: PropTypes.bool,
+  error: PropTypes.bool,
+}
 
 export default ExpiredDate;

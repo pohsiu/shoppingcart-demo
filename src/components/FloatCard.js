@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import FlexDiv from './shared/FlexDiv';
 
 const useStyles = makeStyles(theme => ({
@@ -74,6 +75,11 @@ const CardNumber = (props) => {
   return Array.from(numbers).map(renderNumber);
 };
 
+CardNumber.propTypes = {
+  numbers: PropTypes.string,
+  isTyping: PropTypes.bool,
+}
+
 const FloatCard = (props) => {
   const classes = useStyles();
   const { expiredMonth = '', expiredYear = '', cardName, cardNumber, isTyping } = props;
@@ -104,6 +110,14 @@ const FloatCard = (props) => {
       </Typography>
     </Card>
   );
+}
+
+FloatCard.propTypes = {
+  expiredMonth: PropTypes.string,
+  expiredYear: PropTypes.string,
+  cardName: PropTypes.string,
+  cardNumber: PropTypes.string,
+  isTyping: PropTypes.bool,
 }
 
 export default FloatCard;

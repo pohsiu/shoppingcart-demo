@@ -14,6 +14,7 @@ import {
   Clear,
   AttachMoney,
 } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { processNumber } from '../utils';
 
@@ -68,8 +69,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Item = (props) => {
-  const { 
-    key,
+  const {
     name,
     price,
     setItemNumber,
@@ -119,6 +119,15 @@ const Item = (props) => {
       </IconButton>
     </ListItem>
   )
+}
+
+Item.propTypes = {
+  name:PropTypes.string,
+  price: PropTypes.string,
+  setItemNumber: PropTypes.func,
+  onClearItem: PropTypes.func,
+  hashId: PropTypes.string,
+  count: PropTypes.string || PropTypes.number,
 }
 
 export default Item;

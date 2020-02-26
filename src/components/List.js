@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MuiList from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import PropTypes from 'prop-types';
 import Item from './Item';
 
 const useStyles = makeStyles(theme => ({
@@ -28,6 +29,12 @@ const List = (props) => {
       ))}
     </MuiList>
   )
+}
+
+List.propTypes = {
+  items: PropTypes.array,
+  setItemNumber: PropTypes.func,
+  onClearItem: PropTypes.func,
 }
 
 export default List;

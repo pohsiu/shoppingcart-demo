@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const CreditCard = (props) => {
+const CreditCard = () => {
   const cardInfo = useSelector(Selectors.selectCreditCard);
   const { cardName, cvv, expiredMonth, expiredYear, cardNumber } = cardInfo;
   const dispatch = useDispatch();
