@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import FlexDiv from './components/FlexDiv';
+import FlexDiv from './components/shared/FlexDiv';
 import CreditCard from './containers/CreditCard';
 import ShoppingCart from './containers/ShoppingCart';
 

@@ -68,7 +68,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Item = (props) => {
-  const { key, name, price, setItemNumber, onClearItem, hashId, count, ...others } = props;
+  const { 
+    key,
+    name,
+    price,
+    setItemNumber,
+    onClearItem,
+    hashId,
+    count,
+    ...others } = props;
   const classes = useStyles();
   const onIncreaseClick = () => setItemNumber(processNumber(count + 1));
   const onDecreaseClick = () => setItemNumber(processNumber(count - 1));

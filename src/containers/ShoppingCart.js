@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import Icon from '@material-ui/core/Icon';
-import FlexDiv from '../components/FlexDiv';
+import FlexDiv from '../components/shared/FlexDiv';
 import List from '../components/List';
 import * as Selectors from '../selectors';
 import * as Constants from '../constants';

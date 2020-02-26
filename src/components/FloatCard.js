@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import clsx from 'clsx';
-import FlexDiv from './FlexDiv';
+import FlexDiv from './shared/FlexDiv';
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FlexDiv from './FlexDiv';
-import TextField from './TextField';
+import FlexDiv from './shared/FlexDiv';
+import TextField from './shared/TextField';
 
 const useStyles = makeStyles(theme => ({
   selectRoot: {
